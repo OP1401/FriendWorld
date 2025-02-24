@@ -13,6 +13,7 @@ async def off_ready():
     print(f'BOt ist ausgeloggt als {bot.user}')
 async def wartung():
     print(f'Bot ist in Wartungsarbeiten als {bot.user}')
+async def on_member_join(member):
 
 @bot.command()
 async def hallo(ctx):
