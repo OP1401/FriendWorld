@@ -20,4 +20,4 @@ async def hallo(ctx):
 async def verify(ctx):
     await ctx.send("Danke für deine Verifikation {user}")
 
-bot.run("DEIN_BOT_TOKEN")
+bot.run("MTM0MzI3NDE3NDQxMTU3MTI0MA.GJGkrT.BisJUomUZUd23N7N9rF39sk53NGfZ1v_KUaN_Y")
