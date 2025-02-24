@@ -1,0 +1,5 @@
+@bot.event
+async def on_member_join(member):
+    channel = discord.utils.get(member.guild.text_channels, name="general")  # Kanal anpassen
+    if channel:
+        await channel.send(f"Willkommen auf dem Server, {member.mention}! 🎉")
