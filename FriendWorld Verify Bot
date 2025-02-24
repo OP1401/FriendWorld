@@ -14,6 +14,9 @@ async def off_ready():
 async def wartung():
     print(f'Bot ist in Wartungsarbeiten als {bot.user}')
 async def on_member_join(member):
+    channel = discord.utils.get(member.guild.text_channel, name="general")    #Kanal anpassen
+    if channel:
+        await channel.send(f"Willkommen auf dem FriendWorld Server, {member.mention}")
 
 @bot.command()
 async def hallo(ctx):
@@ -22,3 +25,23 @@ async def verify(ctx):
     await ctx.send("Danke für deine Verifikation {user}")
 
 bot.run("MTM0MzI3NDE3NDQxMTU3MTI0MA.GJGkrT.BisJUomUZUd23N7N9rF39sk53NGfZ1v_KUaN_Y")
+
+@bot.command-moderation()
+async def !ban(ctx):
+    await ctx.send("{user} wurde erfolgreich gebannt")
+async def !unban(ctx):
+    await ctx.send("{user} wurde erfolgreich entbannt")
+async def !kick(ctx):
+    await ctx.send("{user} wurde erfolgreich gekickt von {Server}
+async def !mute(ctx):
+    await ctx.send("{user} wurde erfolgreich gemutet")
+async def !unmute(ctx):
+    await ctx.send("{user} wurde erfolgreich entmutet")
+
+
+git init  # Erstellt ein Git-Repository im Ordner
+git add .  # Fügt alle Dateien hinzu
+git commit -m "Mein Discord-Bot Code"  # Speichert die Änderungen
+git branch -M main  # Setzt den Hauptbranch auf "main"
+git remote add origin https://github.com/DEIN-BENUTZERNAME/DEIN-REPO.git  # Verbindung zu GitHub
+git push -u origin main  # Lädt die Dateien hoch
